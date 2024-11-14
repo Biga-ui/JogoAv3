@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://0gsdrw37xvn2"]
+
+[ext_resource type="Script" path="res://Cenas/startscreen.gd" id="1_8q500"]
+[ext_resource type="Texture2D" uid="uid://b43hxus2hb4re" path="res://AssetsJJS/Small-Village-Map-42366246-1.png" id="2_verb7"]
+[ext_resource type="Texture2D" uid="uid://bjfu6mdbl34jr" path="res://AssetsJJS/13n58PIC8tNdqa7cup4sc_PIC2018.png_300.png" id="4_lwo03"]
+[ext_resource type="Script" path="res://Cenas/button_2.gd" id="5_r36at"]
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_8q500")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(577.5, 337)
+scale = Vector2(2.25195, 1.32422)
+texture = ExtResource("2_verb7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 3.0
+offset_top = -30.0
+offset_right = 1156.0
+offset_bottom = 259.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 56
+text = "CAMINHOS DO CORAÇÃO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = 1153.0
+offset_bottom = 657.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 130
+alignment = 2
+
+[node name="BotaoTutorial" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 1, 0.262745, 1)
+theme_override_font_sizes/font_size = 38
+icon = ExtResource("4_lwo03")
+flat = true
+
+[node name="BotaoJogar" type="Button" parent="VBoxContainer"]
+auto_translate_mode = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 34
+text = "𝑻𝑼𝑻𝑶𝑹𝑰𝑨𝑳"
+flat = true
+icon_alignment = 1
+script = ExtResource("5_r36at")
